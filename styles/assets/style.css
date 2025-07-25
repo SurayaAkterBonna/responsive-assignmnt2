@@ -220,9 +220,9 @@ body {
 
 .flower-lover-section .trusted-badge {
     position: absolute;
-    top: 0; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 150px;
     height: auto;
     z-index: 10;
@@ -252,6 +252,176 @@ body {
     line-height: 1.6;
     margin-bottom: 15px;
 }
+
+
+.latest-deals-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+}
+
+.latest-deals-section .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.latest-deals-section .section-title .orange-text {
+    color: #FF721F;
+}
+
+.latest-deals-section .section-description {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.deal-item {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.deal-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+    border-radius: 10px;
+}
+
+.deal-item .deal-content {
+    position: relative;
+    z-index: 2;
+}
+
+.deal-item .deal-off {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    font-family: 'Playfair Display', serif;
+}
+
+.deal-item .deal-plant-name {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.deal-item .shop-now-btn {
+    background-color: #FF721F;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.deal-item .shop-now-btn:hover {
+    background-color: #e65c00;
+}
+
+.small-deal {
+    grid-column: span 1;
+    min-height: 280px;
+}
+
+.large-deal {
+    grid-column: span 1;
+    grid-row: span 2;
+    min-height: 580px;
+}
+
+
+.newsletter-section {
+    background-image: url('/styles/assets/news-letter-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+}
+
+.newsletter-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.newsletter-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 18px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    flex-grow: 1;
+    min-width: 250px;
+    color: #333;
+}
+
+.newsletter-form button {
+    background-color: #FF721F;
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #e65c00;
+}
+
 
 @media (max-width: 1024px) {
     .header {
@@ -293,6 +463,37 @@ body {
         top: 0;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .deals-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .small-deal, .large-deal {
+        grid-column: span 1;
+        grid-row: span 1;
+        min-height: 280px;
+    }
+
+    .newsletter-section {
+        padding: 60px 20px;
+    }
+    .newsletter-content h1 {
+        font-size: 2.8em;
+    }
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+    }
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        width: 100%;
+        min-width: unset;
+    }
+    .newsletter-form button {
+        margin-top: 15px;
     }
 }
 
@@ -345,6 +546,33 @@ body {
     .flower-lover-section .text-content-flower-lover h2 {
         font-size: 2.5em;
     }
+
+    .latest-deals-section .section-title {
+        font-size: 2.5em;
+    }
+    .latest-deals-section .section-description {
+        font-size: 1em;
+    }
+    .deal-item .deal-off {
+        font-size: 2em;
+    }
+    .deal-item .deal-plant-name {
+        font-size: 1.5em;
+    }
+
+    .newsletter-section {
+        padding: 50px 15px;
+        min-height: 300px;
+    }
+    .newsletter-content h1 {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        padding: 15px 20px;
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -393,5 +621,42 @@ body {
     .flower-lover-section .text-content-flower-lover li {
         text-align: left;
         margin-left: 0;
+    }
+
+    .latest-deals-section .section-title {
+        font-size: 2em;
+    }
+    .latest-deals-section .section-description {
+        font-size: 0.9em;
+    }
+    .deal-item {
+        padding: 20px;
+    }
+    .deal-item .deal-off {
+        font-size: 1.8em;
+    }
+    .deal-item .deal-plant-name {
+        font-size: 1.2em;
+    }
+    .deal-item .shop-now-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .newsletter-section {
+        padding: 40px 10px;
+        min-height: 250px;
+    }
+    .newsletter-content h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        padding: 12px 15px;
+        font-size: 0.9em;
+    }
+    .newsletter-form button {
+        margin-top: 10px;
     }
 }
