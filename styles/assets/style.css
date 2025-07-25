@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Noto Serif', serif;
 }
 
 body {
@@ -33,7 +33,7 @@ body {
 .menu-item {
     font-size: 18px;
     font-weight: 500;
-    color: #a0a0a0;
+   color: #8987a1;
     white-space: nowrap;
     cursor: default;
 }
@@ -61,7 +61,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 80px 80px;
-    background-color: #f8f8f8;
+    background-color: white;
 }
 
 .hero-content {
@@ -76,7 +76,7 @@ body {
     color: #333;
     line-height: 1.1;
     margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Noto Serif', serif;
 }
 
 .hero-content .orange-text {
@@ -114,7 +114,7 @@ body {
 }
 
 .plants-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Noto Serif', serif;
     font-size: 3em;
     color: #333;
     margin-bottom: 15px;
@@ -235,7 +235,7 @@ body {
 }
 
 .flower-lover-section .text-content-flower-lover h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Noto Serif', serif;
     font-size: 3em;
     color: #333;
     margin-bottom: 20px;
@@ -253,7 +253,6 @@ body {
     margin-bottom: 15px;
 }
 
-
 .latest-deals-section {
     text-align: center;
     padding: 80px 20px;
@@ -261,14 +260,10 @@ body {
 }
 
 .latest-deals-section .section-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Noto Serif', serif;
     font-size: 3em;
     color: #333;
     margin-bottom: 15px;
-}
-
-.latest-deals-section .section-title .orange-text {
-    color: #FF721F;
 }
 
 .latest-deals-section .section-description {
@@ -317,37 +312,53 @@ body {
 .deal-item .deal-content {
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .deal-item .deal-off {
-    font-size: 2.5em;
+    font-family: 'Noto Serif', serif;
+    font-size: 2.5em; 
     font-weight: bold;
     margin-bottom: 5px;
     display: block;
-    font-family: 'Playfair Display', serif;
 }
 
 .deal-item .deal-plant-name {
-    font-size: 1.8em;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.8em; 
     font-weight: 600;
     margin-bottom: 20px;
 }
 
-.deal-item .shop-now-btn {
-    background-color: #FF721F;
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
+.deal-item .shop-now-text {
+    color: #fff; 
+    font-size: 1em; 
     font-weight: 600;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
+    text-decoration: underline;
+    text-underline-offset: 8px; 
+    text-decoration-thickness: 2px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+    display: inline-block;
+    margin-top: 5px;
 }
 
-.deal-item .shop-now-btn:hover {
-    background-color: #e65c00;
+.deal-item .shop-now-text:hover {
+    color: #f0f0f0; 
+    text-decoration-color: #f0f0f0; 
+}
+
+.deal-item .deal-combo-name {
+    font-family: 'Noto Serif', serif;
+    font-size: 2.5em; 
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    white-space: nowrap;
 }
 
 .small-deal {
@@ -355,10 +366,23 @@ body {
     min-height: 280px;
 }
 
+.small-deal .deal-off,
+.small-deal .deal-plant-name,
+.small-deal .deal-combo-name {
+    font-size: 20px; 
+}
+
 .large-deal {
     grid-column: span 1;
     grid-row: span 2;
     min-height: 580px;
+}
+
+
+.large-deal .deal-off,
+.large-deal .deal-plant-name,
+.large-deal .deal-combo-name {
+    font-size: 40px; 
 }
 
 
@@ -382,7 +406,7 @@ body {
 }
 
 .newsletter-content h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Noto Serif', serif;
     font-size: 3.5em;
     margin-bottom: 30px;
     line-height: 1.2;
@@ -391,7 +415,7 @@ body {
 .newsletter-form {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    
     max-width: 600px;
     margin: 0 auto;
 }
@@ -399,7 +423,7 @@ body {
 .newsletter-form input[type="email"] {
     padding: 18px 25px;
     border: none;
-    border-radius: 8px;
+    
     font-size: 1.1em;
     flex-grow: 1;
     min-width: 250px;
@@ -411,7 +435,7 @@ body {
     color: white;
     border: none;
     padding: 18px 35px;
-    border-radius: 8px;
+    
     cursor: pointer;
     font-size: 1.1em;
     font-weight: 600;
@@ -420,6 +444,91 @@ body {
 
 .newsletter-form button:hover {
     background-color: #e65c00;
+}
+
+
+.footer {
+    background-color: #f8faff;
+    padding: 80px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-col.about-company {
+    min-width: 300px;
+}
+
+.footer-col .footer-logo {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.footer-col h4 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #FF721F;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li span {
+    font-size: 1em;
+    color: #666;
+    display: block;
+}
+
+.social-icons {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.social-icons a img {
+    height: 35px;
+    width: 35px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: translateY(-3px);
 }
 
 
@@ -494,6 +603,28 @@ body {
     }
     .newsletter-form button {
         margin-top: 15px;
+    }
+
+   
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-col {
+        min-width: unset;
+        width: 80%;
+    }
+    .footer-col.about-company {
+        width: 80%;
+    }
+    .footer-col h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .social-icons {
+        justify-content: center;
+        margin-top: 20px;
     }
 }
 
@@ -573,6 +704,17 @@ body {
         padding: 15px 20px;
         font-size: 1em;
     }
+
+   
+    .footer {
+        padding: 60px 20px;
+    }
+    .footer-col {
+        width: 95%;
+    }
+    .footer-col.about-company {
+        width: 95%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -607,9 +749,9 @@ body {
         padding: 10px 20px;
         font-size: 0.9em;
     }
-
+    
     .flower-lover-section .trusted-badge {
-        width: 100px;
+        display: none;
     }
     .flower-lover-section .text-content-flower-lover h2 {
         font-size: 2em;
@@ -658,5 +800,21 @@ body {
     }
     .newsletter-form button {
         margin-top: 10px;
+    }
+
+    
+    .footer {
+        padding: 40px 15px;
+    }
+    .footer-col h4 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    .footer-col ul li span {
+        font-size: 0.9em;
+    }
+    .social-icons a img {
+        height: 30px;
+        width: 30px;
     }
 }
